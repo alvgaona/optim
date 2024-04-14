@@ -25,10 +25,14 @@ function backtracking(f, x, t₀=1; Δx, β=0.5, α=0.25)
 end
 
 
-f(x) = x[1]^2 + x[2]^2 - 1
+function main()
+  f(x) = x[1]^2 + x[2]^2 - 1
+  x = [2.5 2.5] # current point
 
-x = [2.5 2.5]
+  t = backtracking(f, x, Δx=-gradient(f, x), β=0.1, α=0.1)
 
-t = backtracking(f, x, Δx=gradient(f, x), β=0.1, α=0.1)
+  println("Step length is $t")
+end
 
-println("Step length is $t")
+main()
+
