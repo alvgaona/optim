@@ -23,6 +23,3 @@ docs/site/
 # environment.
 Manifest.toml
 
-# Generated files and directories by Jupyter
-.ipynb_checkpoints/
-
